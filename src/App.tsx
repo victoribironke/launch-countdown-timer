@@ -25,13 +25,11 @@ const App = () => {
       const day = format(new Date().getDate());
       const month = format(new Date().getMonth() + 1);
       const year = new Date().getFullYear();
-      const hour = format(new Date().getHours() - 1);
+      const hour = format(new Date().getHours());
       const minute = format(new Date().getMinutes());
       const second = format(new Date().getSeconds());
 
-      const date1String = `${year}-${month}-${day}T${
-        hour == "-1" ? 23 : hour
-      }:${minute}:${second}Z`;
+      const date1String = `${year}-${month}-${day}T${hour}:${minute}:${second}Z`;
       const date2String = `${year}-${month}-${
         days[month as keyof typeof days]
       }T23:00:00Z`;
