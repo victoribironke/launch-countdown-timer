@@ -29,7 +29,9 @@ const App = () => {
       const minute = format(new Date().getMinutes());
       const second = format(new Date().getSeconds());
 
-      const date1String = `${year}-${month}-${day}T${hour}:${minute}:${second}Z`;
+      const date1String = `${year}-${month}-${day}T${
+        hour == "-1" ? 23 : hour
+      }:${minute}:${second}Z`;
       const date2String = `${year}-${month}-${
         days[month as keyof typeof days]
       }T23:00:00Z`;
