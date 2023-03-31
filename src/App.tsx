@@ -32,7 +32,7 @@ const App = () => {
       const date1String = `${year}-${month}-${day}T${hour}:${minute}:${second}Z`;
       const date2String = `${year}-${month}-${
         days[month as keyof typeof days]
-      }T00:00:00Z`;
+      }T23:59:59Z`;
 
       const date1 = new Date(date1String);
       const date2 = new Date(date2String);
